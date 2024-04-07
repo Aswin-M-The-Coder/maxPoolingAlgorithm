@@ -22,11 +22,17 @@ def max_pooling(matrix, window_size):
 
 # Example usage
 # Considering m x n matrix
-matrix = np.array([[1, 3, 2, 4],
-                   [5, 6, 7, 8],
-                   [9, 10, 11, 12],
-                   [13, 14, 15, 16]])
+row=int(input("Enter Number of Rows: "))
+column=int(input("Enter Number of Columns: "))
+mat=[[0 for _ in range(column)] for _ in range(row)]
+for i in range(row):
+    for j in range(column):
+        mat[i][j]=int(input(f"Enter vatue for mat[{i}][{j}] = "))
+print(mat)
+matrix = np.array(mat)
 
-window_size = 2
+window_size = int(input("Enter Winddow Size: "))
 result = max_pooling(matrix, window_size)
+
+print("Resut Matrix")
 print(result)
